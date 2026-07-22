@@ -1,8 +1,10 @@
 import CategoryList from "../components/CategoryList";
 import BookCard from "../components/BookCard";
-import books from "../data/books";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+
+const books = useSelector((state) => state.books.books);
   const popularBooks = books.slice(0, 4);
 
   return (
