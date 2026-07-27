@@ -61,7 +61,7 @@ export default function AddBook() {
       <div className="min-h-screen  flex items-center justify-center px-2 md:px-4 py-5 md:py-10">
         <div className="w-full max-w-3xl bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-3 md:p-6 sm:p-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-2">
-            📚 Add New Book
+           Add New Book
           </h1>
 
           <p className="text-center text-gray-500 mb-8">

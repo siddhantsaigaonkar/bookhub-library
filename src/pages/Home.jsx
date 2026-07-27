@@ -72,27 +72,27 @@ const popularBooks = books.filter((book) => book.rating >= 4);
       </section>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6">
+        <div className="bg-white rounded-xl shadow-lg p-6 text-center">
           <h2 className="text-3xl font-bold text-blue-600">{totalBooks}</h2>
           <p>Total Books</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
+        <div className="bg-white rounded-xl shadow-lg p-6 text-center">
           <h2 className="text-3xl font-bold text-green-600">
             {totalCategories}
           </h2>
           <p>Categories</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
+        <div className="bg-white rounded-xl shadow-lg p-6 text-center">
           <h2 className="text-3xl font-bold text-yellow-500">
             ⭐ {averageRating}
           </h2>
           <p>Average Rating</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
+        <div className="bg-white rounded-xl shadow-lg p-6 text-center">
           <h2 className="text-3xl font-bold text-purple-600">
             ⭐ {highestRatedBook}
           </h2>

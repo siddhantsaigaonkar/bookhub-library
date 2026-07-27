@@ -26,7 +26,7 @@ export default function Layout() {
       <Navbar />
 
       <main className="flex-1 bg-gradient-to-br from-indigo-100 via-sky-100 to-purple-100">
-        <div className="max-w-7xl mx-auto p-3 md:p-6">
+        <div className="max-[1300px] mx-auto p-3 md:p-6">
           <Outlet />
         </div>
       </main>
