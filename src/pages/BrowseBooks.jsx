@@ -1,11 +1,12 @@
 
 import { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
-import books from "../data/books";
+import { useSelector } from "react-redux";
 import BookCard from "../components/BookCard";
 import SearchBar from "../components/SearchBar";
 
 export default function BrowseBooks() {
+  const books = useSelector((state) => state.books.books);
   const { category } = useParams();
   const [searchTerm, setSearchTerm] = useState("");
 
