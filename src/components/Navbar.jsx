@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/logo.png";
+import { FaBookOpen } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +15,15 @@ export default function Navbar() {
     }`;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-md realtive">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200 shadow-md ">
       <div className="max-w-7xl mx-auto px-5 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3">
-            <img src={logo} alt="BookHub" className="w-15 h-14  object-cover" />
+            <div className="flex items-center gap-2">
+              <FaBookOpen className="w-10 h-10 text-blue-400" />
+              <h2 className="text-2xl font-bold ">BookHub</h2>
+            </div>
             {/* 
             <div>
               <h1 className="text-2xl font-bold text-blue-700">BookHub</h1>
@@ -53,31 +57,33 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <nav className="absolute left-0 top-full w-full  shadow-lg md:hidden rounded-md bg-amber-200 ">
-            <div className="flex flex-col p-4 gap-2">
-              <NavLink
-                to="/"
-                className={navLinkClass}
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </NavLink>
+          <nav className="absolute top-full left-0 w-full mt-2 md:hidden">
+            <div className="rounded-xl border border-gray-200 bg-white/95 backdrop-blur-md shadow-xl p-3">
+              <div className="flex flex-col gap-2">
+                <NavLink
+                  to="/"
+                  className={navLinkClass}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Home
+                </NavLink>
 
-              <NavLink
-                to="/browse-books"
-                className={navLinkClass}
-                onClick={() => setIsOpen(false)}
-              >
-                Browse Books
-              </NavLink>
+                <NavLink
+                  to="/browse-books"
+                  className={navLinkClass}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Browse Books
+                </NavLink>
 
-              <NavLink
-                to="/add-book"
-                className={navLinkClass}
-                onClick={() => setIsOpen(false)}
-              >
-                Add Book
-              </NavLink>
+                <NavLink
+                  to="/add-book"
+                  className={navLinkClass}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Add Book
+                </NavLink>
+              </div>
             </div>
           </nav>
         )}

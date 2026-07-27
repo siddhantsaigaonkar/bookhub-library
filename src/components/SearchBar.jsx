@@ -5,7 +5,7 @@ export default function SearchBar({ searchTerm, setSearchTerm }) {
       placeholder="Search by title or author..."
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      className="w-full border rounded-lg p-3 outline-none focus:ring-2 focus:ring-blue-500"
+      className="mt-2 w-full rounded-xl border border-gray-300 p-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition"
     />
   );
 }

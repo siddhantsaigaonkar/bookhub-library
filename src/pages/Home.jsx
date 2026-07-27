@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CategoryList from "../components/CategoryList";
 import BookCard from "../components/BookCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/grid";
+import { Navigation, Grid } from "swiper/modules";
+
 
 
 export default function Home() {
@@ -29,17 +35,17 @@ const totalCategories = categories.length;
     books.length > 0
       ? Math.max(...books.map((book) => Number(book.rating)))
       : 0;
-  const popularBooks = books.slice(0, 4);
+const popularBooks = books.filter((book) => book.rating >= 4);
 
   return (
-    <div className="space-y-20">
+    <div className="space-y-10">
       {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white">
+      <section className="relative overflow-hidden rounded-sm bg-linear-to-r from-blue-700 via-indigo-700 to-purple-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
 
-        <div className="relative px-6 py-10 md:px-12 lg:px-20 lg:py-28 text-center">
+        <div className="relative px-6 py-5 md:px-12 lg:px-20 lg:py-28 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-            Welcome to <span className="text-yellow-300">BookHub</span> 📚
+            Welcome to <span className="text-yellow-300">BookHub</span> 
           </h1>
 
           <p className="mt-6 max-w-3xl mx-auto text-base md:text-xl text-gray-100">
@@ -96,12 +102,6 @@ const totalCategories = categories.length;
 
       {/* Categories */}
       <section>
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">
-            Browse Categories
-          </h2>
-        </div>
-
         <CategoryList />
       </section>
 
@@ -118,20 +118,36 @@ const totalCategories = categories.length;
           </Link>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <Swiper
+          modules={[Navigation, Grid]}
+          navigation
+          spaceBetween={10}
+          grid={{
+            rows: 2,
+            fill: "row",
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          }}
+        >
           {popularBooks.map((book) => (
-            <div
-              key={book.id}
-              className="transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
+            <SwiperSlide key={book.id}>
               <BookCard book={book} />
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </section>
 
       {/* Bottom Banner */}
-      <section className="rounded-3xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white p-10 text-center">
+      <section className="rounded-3xl bg-linear-to-r from-indigo-600 to-blue-600 text-white p-10 text-center">
         <h2 className="text-3xl md:text-4xl font-bold">
           Ready to Grow Your Library?
         </h2>

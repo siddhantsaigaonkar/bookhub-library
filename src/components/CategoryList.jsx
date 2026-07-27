@@ -21,7 +21,7 @@ export default function CategoryList() {
           <Link
             key={category}
             to={`/books/${category}`}
-            className="bg-white shadow-lg rounded-2xl p-6 text-center font-semibold text-gray-700 hover:bg-blue-600 hover:text-white hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
+            className="bg-white shadow-lg rounded-xl p-6 text-center font-semibold text-gray-700 hover:bg-blue-600 hover:text-white hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300"
           >
             {category}
           </Link>

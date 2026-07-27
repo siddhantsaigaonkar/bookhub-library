@@ -2,23 +2,30 @@ import { Link } from "react-router-dom";
 
 export default function BookCard({ book }) {
   return (
-    <div className="rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition bg-white">
+    <div className="rounded-sm shadow-lg overflow-hidden hover:shadow-xl transition bg-linear-to-b from-white to-slate-100 border border-gray-200">
       <img
         src={book.image}
         alt={book.title}
-        className="w-full h-64 object-cover"
+        className="w-full h-54 md:h-34 md:h-64 object-contain mt-5"
       />
 
-      <div className="p-5">
-        <h3 className="text-xl font-bold">{book.title}</h3>
+      <div className="p-4 flex flex-col justify-between h-[170px]">
+        <div className="flex justify-between items-start gap-2">
+          <h3 className="text-sm md:text-md font-bold flex-1 line-clamp-1">
+            {book.title}
+          </h3>
 
-        <p className="text-gray-600 mt-2">{book.author}</p>
+          <p className="text-yellow-500 text-sm shrink-0">⭐ {book.rating}</p>
+        </div>
 
-        <p className="text-yellow-500 mt-2">⭐ {book.rating}</p>
+        <p className="text-gray-600">{book.author}</p>
+        <p className="text-sm text-gray-500 leading-relaxed tracking-wide line-clamp-2">
+          {book.description}
+        </p>
 
         <Link
           to={`/book/${book.id}`}
-          className="inline-block mt-5 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+          className="flex justify-center bg-blue-600 text-white px-4 py-2 rounded-sm hover:bg-blue-700 mt-2"
         >
           View Details
         </Link>
