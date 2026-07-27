@@ -147,12 +147,12 @@ const popularBooks = books.filter((book) => book.rating >= 4);
       </section>
 
       {/* Bottom Banner */}
-      <section className="rounded-3xl bg-linear-to-r from-indigo-600 to-blue-600 text-white p-10 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold">
+      <section className="rounded-md bg-linear-to-r from-indigo-600 to-blue-600 text-white p-5 md:p-10 text-center">
+        <h2 className="text-xl md:text-4xl font-bold">
           Ready to Grow Your Library?
         </h2>
 
-        <p className="mt-4 text-lg text-gray-100">
+        <p className="mt-4 text-md text-gray-100">
           Add your favorite books and share your reading collection with
           everyone.
         </p>

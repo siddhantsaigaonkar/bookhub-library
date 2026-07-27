@@ -11,14 +11,17 @@ export default function BookCard({ book }) {
 
       <div className="p-3 md:p-4 flex flex-col justify-between h-[170px]">
         <div className="flex justify-between items-start gap-2">
-          <h3 className="text-sm md:text-md font-bold flex-1 line-clamp-1">
+          <h3 className="text-sm md:text-xl font-bold flex-1 line-clamp-1">
             {book.title}
           </h3>
 
           <p className="text-yellow-500 text-sm shrink-0">⭐ {book.rating}</p>
         </div>
 
-        <p className="text-gray-600 text-sm">{book.author}</p>
+        <p className="text-gray-600 text-sm">
+          <span className="italic">by </span>
+          {book.author}
+        </p>
         <p className="text-xs md:text-sm text-gray-500 leading-relaxed tracking-wide line-clamp-2">
           {book.description}
         </p>

@@ -59,16 +59,16 @@ export default function AddBook() {
   return (
     <div className="">
       <div className="min-h-screen  flex items-center justify-center px-2 md:px-4 py-5 md:py-10">
-        <div className="w-full max-w-3xl bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl p-3 md:p-6 sm:p-10">
+        <div className="w-full max-w-3xl bg-white/90 backdrop-blur-lg shadow-2xl rounded-md p-3 md:p-6 sm:p-10">
           <h1 className="text-3xl sm:text-4xl font-bold text-center text-indigo-700 mb-2">
-           Add New Book
+            Add New Book
           </h1>
 
-          <p className="text-center text-gray-500 mb-8">
+          <p className="text-center text-gray-500 mb-4">
             Fill in the details to add a new book to BookHub.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-2 md:space-y-4">
             {/* Title */}
             <div>
               <label className="font-semibold text-gray-700">Book Title</label>
@@ -159,7 +159,7 @@ export default function AddBook() {
             <div>
               <label className="font-semibold text-gray-700">Description</label>
               <textarea
-                rows="5"
+                rows="4"
                 name="description"
                 placeholder="Write a short description..."
                 value={formData.description}
@@ -175,9 +175,9 @@ export default function AddBook() {
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-indigo-600 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-indigo-700 hover:scale-[1.02] active:scale-95"
+              className="w-full rounded-sm bg-indigo-600 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-indigo-700 hover:scale-[1.02] active:scale-95"
             >
-              📖 Add Book
+               Add Book
             </button>
           </form>
         </div>
