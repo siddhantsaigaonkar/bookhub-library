@@ -1,16 +1,75 @@
-# React + Vite
+#  BookHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Book Management** web application built with **React**, **Redux Toolkit**, **React Router**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+BookHub allows users to browse books, filter by categories, search for books, add new books, and view detailed information in a clean and intuitive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  GitHub Repository
 
-## React Compiler
+Repository: [Bookhub](https://github.com/siddhantsaigaonkar/bookhub-library)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Browse all available books
+* Search books by title
+* Filter books by category
+* Add new books
+* View detailed information for each book
+* State management using Redux Toolkit
+* Client-side routing with React Router
+* Fully responsive UI
+* Modern design with Tailwind CSS
+
+---
+
+## Tech Stack
+
+* **React**
+* **Redux Toolkit**
+* **React Router DOM**
+* **Tailwind CSS**
+* **Vite**
+* **Swiper.js**
+
+---
+
+##  Pages
+
+*   Home
+*  Browse Books
+*  Add Book
+*  Book Details
+*  Not Found
+
+---
+
+##  Learning Outcomes
+
+This project demonstrates:
+
+* React Functional Components
+* React Hooks
+* Redux Toolkit
+* React Router
+* Component Reusability
+* Responsive Design
+* State Management
+* Modern UI Development
+
+---
+
+## Future Improvements
+
+* Add books
+* Book cover image upload
+
+---
+
+##  Author
+
+**Siddhant Saigaonkar**
+
+GitHub: https://github.com/siddhantsaigaonkar
+
