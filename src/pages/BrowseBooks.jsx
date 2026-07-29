@@ -66,13 +66,15 @@ export default function BrowseBooks() {
       </section>
 
       {/* Mobile Filter Button */}
-      <button
-        onClick={() => setShowFilters(true)}
-        className="fixed bottom-5 left-1/2 -translate-x-1/2 md:hidden flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full shadow-xl z-40"
-      >
-        <SlidersHorizontal size={18} />
-        Filters
-      </button>
+      <div className="fixed bottom-5 left-1/2 -translate-x-1/2 md:hidden z-40 animate-soft-bounce">
+        <button
+          onClick={() => setShowFilters(true)}
+          className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full shadow-xl"
+        >
+          <SlidersHorizontal size={18} />
+          Filters
+        </button>
+      </div>
 
       {/* Mobile Bottom Sheet */}
       {showFilters && (
