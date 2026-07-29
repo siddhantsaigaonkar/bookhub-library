@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@keyframes softBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-bounce {
+  animation: softBounce 1.8s ease-in-out infinite;
+}
