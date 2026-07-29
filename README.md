@@ -117,10 +117,6 @@ npm run build
 ![Add Book](./screenshots/Addbook.png)
 
 
-
-
-
-
 ---
 
 ##  Learning Outcomes
