@@ -60,13 +60,6 @@ This project demonstrates:
 
 ---
 
-## Future Improvements
-
-* Add books
-* Book cover image upload
-
----
-
 ##  Author
 
 **Siddhant Saigaonkar**
