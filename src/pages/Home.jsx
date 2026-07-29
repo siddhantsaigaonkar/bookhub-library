@@ -108,7 +108,7 @@ const popularBooks = books.filter((book) => book.rating >= 4);
       {/* Popular Books */}
       <section>
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">📖 Popular Books</h2>
+          <h2 className="text-3xl font-bold text-gray-800">Popular Books</h2>
 
           <Link
             to="/browse-books"
