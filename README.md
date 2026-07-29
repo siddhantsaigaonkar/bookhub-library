@@ -35,6 +35,56 @@ Repository: [Bookhub](https://github.com/siddhantsaigaonkar/bookhub-library)
 
 ---
 
+## 🚀 How to Run the Application
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v18 or later recommended)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/siddhantsaigaonkar/bookhub-library.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd bookhub-library
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+5. Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+
+---
+
 ##  Pages
 
 *   Home
@@ -42,6 +92,34 @@ Repository: [Bookhub](https://github.com/siddhantsaigaonkar/bookhub-library)
 *  Add Book
 *  Book Details
 *  Not Found
+
+---
+
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+
+![Home](./screenshots/homepageScreenShot.png)
+
+### Browse Books
+
+![Browse Books](./screenshots/BrowseBook.png)
+
+### Book Details
+
+![Book Details](./screenshots/Bookdetail.png)
+
+### Add Book
+
+![Add Book](./screenshots/Addbook.png)
+
+
+
+
+
 
 ---
 
